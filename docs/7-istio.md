@@ -83,7 +83,7 @@ kubectl -n test apply -f ./deploy/istio-v1alpha3/istio-gateway.yaml
 Create a `loadtest` pod for testing:
 
 ```bash
-kubectl -n test run -i --rm --tty loadtest --image=stefanprodan/loadtest --restart=Never -- sh
+kubectl -n test run -i --rm --tty loadtest --image=drweber/loadtest --restart=Never -- sh
 ```
 
 Start the load test:
@@ -121,7 +121,7 @@ spec:
       weight: 100
 ```
 
-![s1](https://github.com/stefanprodan/k8s-podinfo/blob/master/docs/screens/istio-c-s1.png)
+![s1](https://github.com/drweber/k8s-podinfo/blob/master/docs/screens/istio-c-s1.png)
 
 **Canary warm-up**
 
@@ -140,7 +140,7 @@ Route 10% of the traffic to the canary deployment:
       weight: 90
 ```
 
-![s2](https://github.com/stefanprodan/k8s-podinfo/blob/master/docs/screens/istio-c-s2.png)
+![s2](https://github.com/drweber/k8s-podinfo/blob/master/docs/screens/istio-c-s2.png)
 
 **Canary promotion**
 
@@ -159,7 +159,7 @@ Increase the canary traffic to 60%:
       weight: 40
 ```
 
-![s3](https://github.com/stefanprodan/k8s-podinfo/blob/master/docs/screens/istio-c-s3.png)
+![s3](https://github.com/drweber/k8s-podinfo/blob/master/docs/screens/istio-c-s3.png)
 
 Full promotion, 100% of the traffic to the canary:
 
@@ -176,19 +176,19 @@ Full promotion, 100% of the traffic to the canary:
       weight: 0
 ```
 
-![s4](https://github.com/stefanprodan/k8s-podinfo/blob/master/docs/screens/istio-c-s4.png)
+![s4](https://github.com/drweber/k8s-podinfo/blob/master/docs/screens/istio-c-s4.png)
 
 Measure requests latency for each deployment:
 
-![s5](https://github.com/stefanprodan/k8s-podinfo/blob/master/docs/screens/istio-c-s5.png)
+![s5](https://github.com/drweber/k8s-podinfo/blob/master/docs/screens/istio-c-s5.png)
  
 Observe the traffic shift with Scope:
 
-![s0](https://github.com/stefanprodan/k8s-podinfo/blob/master/docs/screens/istio-c-s0.png)
+![s0](https://github.com/drweber/k8s-podinfo/blob/master/docs/screens/istio-c-s0.png)
 
 ### Applying GitOps
 
-![gitops](https://github.com/stefanprodan/k8s-podinfo/blob/master/docs/diagrams/istio-gitops.png)
+![gitops](https://github.com/drweber/k8s-podinfo/blob/master/docs/diagrams/istio-gitops.png)
 
 Prerequisites for automating Istio canary deployments:
 

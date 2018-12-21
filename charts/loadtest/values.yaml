@@ -1,6 +1,6 @@
 # Default values for loadtest.
 
-image: stefanprodan/loadtest:latest
+image: drweber/loadtest:latest
 
 tests:
   - name: "blue"

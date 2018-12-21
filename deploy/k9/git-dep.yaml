@@ -17,13 +17,13 @@ spec:
         name: gitsrv
     spec:
       containers:
-      - image: stefanprodan/gitsrv:0.0.5
+      - image: drweber/gitsrv:0.0.5
         name: git
         env:
         - name: REPO
           value: "cluster.git"
         - name: TAR_URL
-          value: "https://github.com/stefanprodan/kubecon-cluster/archive/0.0.1.tar.gz"
+          value: "https://github.com/drweber/kubecon-cluster/archive/0.0.1.tar.gz"
         ports:
         - containerPort: 22
           name: ssh

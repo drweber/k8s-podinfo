@@ -17,7 +17,7 @@ profiles:
     build:
       local: { skipPush: true }
       artifacts:
-      - imageName: stefanprodan/podinfo
+      - imageName: drweber/podinfo
         docker:
           dockerfilePath: ./Dockerfile.ci
     deploy: {} # not needed here as such
@@ -27,7 +27,7 @@ profiles:
     build:
       local: { skipPush: false }
       artifacts:
-      - imageName: stefanprodan/podinfo
+      - imageName: drweber/podinfo
         docker:
           dockerfilePath: ./Dockerfile.ci
     deploy: {} # no-op, flux will take care of this

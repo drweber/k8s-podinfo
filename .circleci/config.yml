@@ -20,7 +20,7 @@ jobs:
       - run:
           name: Build and push the image to the registry with Skaffold
           command: |
-            if [[ -z "${CIRCLE_PULL_REQUEST}" ]] && [[ "${CIRCLE_PROJECT_USERNAME}" = "stefanprodan" ]] ; then
+            if [[ -z "${CIRCLE_PULL_REQUEST}" ]] && [[ "${CIRCLE_PROJECT_USERNAME}" = "drweber" ]] ; then
               echo $REGISTRY_PASSWORD | docker login --username $REGISTRY_USERNAME --password-stdin
               skaffold build --profile=production
             else

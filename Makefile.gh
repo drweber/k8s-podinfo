@@ -1,6 +1,6 @@
-DOCKER_IMAGE?=stefanprodan/k8s-podinfo
+DOCKER_IMAGE?=drweber/k8s-podinfo
 DOCKER_TAG?=$(shell git symbolic-ref --short HEAD)
-GIT_REPOSITORY?=stefanprodan/k8s-podinfo
+GIT_REPOSITORY?=drweber/k8s-podinfo
 GIT_SHA:=$(shell git describe --dirty --always)
 
 .PHONY: all

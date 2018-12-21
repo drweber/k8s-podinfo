@@ -6,7 +6,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/spf13/viper"
-	"github.com/stefanprodan/k8s-podinfo/pkg/fscache"
+	"github.com/drweber/k8s-podinfo/pkg/fscache"
 	"go.uber.org/zap"
 	"net/http"
 	_ "net/http/pprof"

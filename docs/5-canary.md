@@ -9,7 +9,7 @@ Canary Deployment and A/B testing with Ambassador's Envoy API Gateway.
 Deploy Ambassador and expose it with a LoadBalancer service or NodePort if you are running on-prem:
 
 ```bash
-helm repo add sp https://stefanprodan.github.io/k8s-podinfo
+helm repo add sp https://drweber.github.io/k8s-podinfo
 
 helm upgrade --install --wait envoy \
     --set service.type=LoadBalancer \

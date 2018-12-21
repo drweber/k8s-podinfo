@@ -35,7 +35,7 @@ helm init --skip-refresh --upgrade --service-account tiller
 Add k8s-podinfo repo:
 
 ```bash
-helm repo add sp https://stefanprodan.github.io/k8s-podinfo
+helm repo add sp https://drweber.github.io/k8s-podinfo
 ```
 
 Create a namespace:

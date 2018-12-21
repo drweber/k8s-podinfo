@@ -6,9 +6,9 @@ EMPTY:=
 SPACE:=$(EMPTY) $(EMPTY)
 COMMA:=$(EMPTY),$(EMPTY)
 NAME:=podinfo
-DOCKER_REPOSITORY:=stefanprodan
+DOCKER_REPOSITORY:=drweber
 DOCKER_IMAGE_NAME:=$(DOCKER_REPOSITORY)/$(NAME)
-GITREPO:=github.com/stefanprodan/k8s-podinfo
+GITREPO:=github.com/drweber/k8s-podinfo
 GITCOMMIT:=$(shell git describe --dirty --always)
 VERSION:=$(shell grep 'VERSION' pkg/version/version.go | awk '{ print $$4 }' | tr -d '"')
 LINUX_ARCH:=arm arm64 ppc64le s390x amd64
@@ -111,4 +111,4 @@ charts:
 	cd charts/ && helm package grafana/
 	cd charts/ && helm package ngrok/
 	mv charts/*.tgz docs/
-	helm repo index docs --url https://stefanprodan.github.io/k8s-podinfo --merge ./docs/index.yaml
+	helm repo index docs --url https://drweber.github.io/k8s-podinfo --merge ./docs/index.yaml

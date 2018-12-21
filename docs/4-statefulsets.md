@@ -154,7 +154,7 @@ spec:
             topologyKey: "kubernetes.io/hostname"
       containers:
         - name: podinfod
-          image: stefanprodan/podinfo:0.0.7
+          image: drweber/podinfo:0.0.7
           command:
             - ./podinfo
             - -port=9898

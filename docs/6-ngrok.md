@@ -16,7 +16,7 @@ receive GitHub notifications via webhooks in an application hosted on your local
 ### Deploy a webhook receiver
 
 In order to receive notifications from GitHub you need a web application that exposes a 
-HTTP POST endpoint and accepts a JSON payload. [Podinfo](https://github.com/stefanprodan/k8s-podinfo) 
+HTTP POST endpoint and accepts a JSON payload. [Podinfo](https://github.com/drweber/k8s-podinfo) 
 is a tiny web app made with Go that can receive any kind of payload on the `/echo` route. 
 Let's deploy podinfo using Helm. 
 
@@ -51,7 +51,7 @@ helm init --skip-refresh --upgrade --service-account tiller
 The `podinfo` and `ngrok` charts are hosted on GitHub. Add the k8s-podinfo repo:
 
 ```bash
-helm repo add sp https://stefanprodan.github.io/k8s-podinfo
+helm repo add sp https://drweber.github.io/k8s-podinfo
 ```
 
 Install `podinfo`:
